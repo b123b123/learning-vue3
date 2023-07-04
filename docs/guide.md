@@ -1329,7 +1329,7 @@ Import Maps 的运行机制是通过 import 映射来控制模块说明符的解
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/esm-run.jpg"
+    src="./assets/img/esm-run.jpg"
     alt="esm.run 网站上的包转换操作界面"
   />
 </ClientOnly>
@@ -1360,7 +1360,7 @@ https://cdn.jsdelivr.net/npm/md5/+esm
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/components.png"
+    src="./assets/img/components.png"
     alt="把页面拆分成多个组件，降低维护成本（摘自 Vue 官网）"
   />
 </ClientOnly>
@@ -1823,7 +1823,7 @@ npm run dev:esm
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/caniuse-es6-classes.jpg"
+    src="./assets/img/caniuse-es6-classes.jpg"
     alt="在 caniuse 网站上查询 ES6 `class` 的兼容情况"
   />
 </ClientOnly>

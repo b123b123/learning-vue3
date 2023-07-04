@@ -8,7 +8,7 @@ outline: 'deep'
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/book.png"
+    src="./assets/img/book.png"
     alt="前端工程化：基于 Vue.js 3.0 的设计与实践"
   />
 </ClientOnly>

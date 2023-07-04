@@ -1401,7 +1401,7 @@ declare module '@learning-vue3/lib'
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/npm-detail-ts-icon.jpg"
+    src="./assets/img/npm-detail-ts-icon.jpg"
     alt="注意 npm 包名称后面的 TS 图标"
   />
 </ClientOnly>
@@ -1805,7 +1805,7 @@ https://unpkg.com/@learning-vue3/lib
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-versions-on-npmjs.jpg"
+    src="./assets/img/vue-versions-on-npmjs.jpg"
     alt="Vue 在 npmjs 上的版本列表"
   />
 </ClientOnly>

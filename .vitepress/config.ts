@@ -8,6 +8,7 @@ import pkg from '../package.json'
 
 export default defineConfig({
   appearance: 'dark',
+  base: '/learn-vue3/',
   srcDir: 'docs',
   outDir: 'dist',
   lang: 'zh-CN',

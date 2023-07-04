@@ -20,7 +20,7 @@ outline: 'deep'
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-versions-on-npmjs.jpg"
+    src="./assets/img/vue-versions-on-npmjs.jpg"
     alt="Vue 在 npmjs 上的版本列表"
   />
 </ClientOnly>
@@ -690,8 +690,8 @@ Components 是以结构化的方式显示组件的调试信息，可以查看组
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-devtools-components.jpg"
-    dark="/assets/img/vue-devtools-components-dark.jpg"
+    src="./assets/img/vue-devtools-components.jpg"
+    dark="./assets/img/vue-devtools-components-dark.jpg"
     alt="Vue Devtools 的 Components 界面"
   />
 </ClientOnly>
@@ -700,8 +700,8 @@ Routes 可以查看当前所在路由的配置信息：
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-devtools-routes.jpg"
-    dark="/assets/img/vue-devtools-routes-dark.jpg"
+    src="./assets/img/vue-devtools-routes.jpg"
+    dark="./assets/img/vue-devtools-routes-dark.jpg"
     alt="Vue Devtools 的 Routes 界面"
   />
 </ClientOnly>
@@ -710,8 +710,8 @@ Timeline 是以时间线的方式追踪不同类型的数据，例如事件：
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-devtools-timeline.jpg"
-    dark="/assets/img/vue-devtools-timeline-dark.jpg"
+    src="./assets/img/vue-devtools-timeline.jpg"
+    dark="./assets/img/vue-devtools-timeline-dark.jpg"
     alt="Vue Devtools 的 Timeline 界面"
   />
 </ClientOnly>
@@ -720,8 +720,8 @@ Pinia 是可以查看当前组件引入的全局状态情况：
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/vue-devtools-pinia.jpg"
-    dark="/assets/img/vue-devtools-pinia-dark.jpg"
+    src="./assets/img/vue-devtools-pinia.jpg"
+    dark="./assets/img/vue-devtools-pinia-dark.jpg"
     alt="Vue Devtools 的 Pinia 界面"
   />
 </ClientOnly>

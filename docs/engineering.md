@@ -268,8 +268,8 @@ src/index.ts:2:1 - error TS2322: Type 'number' is not assignable to type 'boolea
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/job-details.png"
-    dark="/assets/img/job-details-dark.png"
+    src="./assets/img/job-details.png"
+    dark="./assets/img/job-details-dark.png"
     alt="知名企业对 1-3 年经验的前端工程师招聘要求"
   />
 </ClientOnly>
@@ -564,8 +564,8 @@ MPA 多页面应用是最传统的网站体验，当一个网站有多个页面�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/seo-page.jpg"
-    dark="/assets/img/seo-page-dark.jpg"
+    src="./assets/img/seo-page.jpg"
+    dark="./assets/img/seo-page-dark.jpg"
     alt="网页呈现的内容"
   />
 </ClientOnly>
@@ -574,8 +574,8 @@ MPA 多页面应用是最传统的网站体验，当一个网站有多个页面�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/seo-page-code.jpg"
-    dark="/assets/img/seo-page-code-dark.jpg"
+    src="./assets/img/seo-page-code.jpg"
+    dark="./assets/img/seo-page-code-dark.jpg"
     alt="网页内容对应的 HTML 源码"
   />
 </ClientOnly>
@@ -678,8 +678,8 @@ Vue Router 默认提供了这两种 URL 改变方式的支持，分别是 `creat
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/seo-spa-page-code.jpg"
-    dark="/assets/img/seo-spa-page-code-dark.jpg"
+    src="./assets/img/seo-spa-page-code.jpg"
+    dark="./assets/img/seo-spa-page-code-dark.jpg"
     alt="单页面应用的网页内容只有一个空的 HTML 结构"
   />
 </ClientOnly>
@@ -851,16 +851,16 @@ Node 本身是一个 JavaScript 的运行时，还提供了 [HTTP 模块](https:
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/screenshot-vscode.jpg"
-    dark="/assets/img/screenshot-vscode-dark.jpg"
+    src="./assets/img/screenshot-vscode.jpg"
+    dark="./assets/img/screenshot-vscode-dark.jpg"
     alt="Visual Studio Code 界面截图"
   />
 </ClientOnly>
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/screenshot-postman.jpg"
-    dark="/assets/img/screenshot-postman-dark.jpg"
+    src="./assets/img/screenshot-postman.jpg"
+    dark="./assets/img/screenshot-postman-dark.jpg"
     alt="Postman 界面截图"
   />
 </ClientOnly>
@@ -887,8 +887,8 @@ Electron 的底层是基于 Chromium 和 Node.js ，它提供了两个进程供�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/screenshot-pkg.jpg"
-    dark="/assets/img/screenshot-pkg-dark.jpg"
+    src="./assets/img/screenshot-pkg.jpg"
+    dark="./assets/img/screenshot-pkg-dark.jpg"
     alt="使用 Pkg 构建后的程序运行截图"
   />
 </ClientOnly>
@@ -1097,7 +1097,7 @@ Vite 的作者也是熟悉的 Vue 作者尤雨溪，它是一个基于 ESM 实�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/bundler.png"
+    src="./assets/img/bundler.png"
     alt="Webpack 的工作原理（摘自 Vite 官网）"
   />
 </ClientOnly>
@@ -1106,7 +1106,7 @@ Vite 是基于浏览器原生的 ES Module ，所以不需要预先打包，而�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/esm.png"
+    src="./assets/img/esm.png"
     alt="Vite 的工作原理（摘自 Vite 官网）"
   />
 </ClientOnly>

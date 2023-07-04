@@ -58,7 +58,7 @@ outline: 'deep'
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/cookbook-miniprogram.jpg"
+    src="./assets/img/cookbook-miniprogram.jpg"
     alt="请打开微信扫描二维码"
   />
 </ClientOnly>

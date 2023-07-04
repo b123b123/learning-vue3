@@ -766,7 +766,7 @@ Grandfather.vue
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/communication-prop-drilling.png"
+    src="./assets/img/communication-prop-drilling.png"
     alt="Props 的多级传递会非常繁琐（摘自 Vue 官网）"
   />
 </ClientOnly>
@@ -794,7 +794,7 @@ Grandfather.vue
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/communication-provide-inject.png"
+    src="./assets/img/communication-provide-inject.png"
     alt="使用 provide / inject 后，问题将变得非常简单（摘自 Vue 官网）"
   />
 </ClientOnly>

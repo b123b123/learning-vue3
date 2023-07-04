@@ -61,8 +61,8 @@ Vue.js 是一个 “渐进式” 的框架，它可以只用最基础的组件�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/donate.jpg"
-    dark="/assets/img/donate-dark.jpg"
+    src="./assets/img/donate.jpg"
+    dark="./assets/img/donate-dark.jpg"
     alt="请打开微信扫描二维码"
   />
 </ClientOnly>
@@ -71,7 +71,7 @@ Vue.js 是一个 “渐进式” 的框架，它可以只用最基础的组件�
 
 <ClientOnly>
   <ImgWrap
-    src="/assets/img/cats.jpg"
+    src="./assets/img/cats.jpg"
     alt="从左到右：黑妹、小朋友、弟弟"
   />
 </ClientOnly>
