@@ -28,10 +28,6 @@ Vue 3.0 从 2020 年 9 月份中旬正式发布，到 2022 年 2 月份代替 Vu
 
 目前笔者所带领的前端团队已经全员使用 TypeScript 和 Vue 3 进行日常的开发工作，团队成员的学习过程都非常顺利，各位开发者可放心阅读。
 
-## 开始阅读
-
-点击在线阅读：[https://vue3.chengpeiquan.com/](https://vue3.chengpeiquan.com/)
-
 ## License
 
 MIT License © 2020 [chengpeiquan](https://github.com/chengpeiquan)
