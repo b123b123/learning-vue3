@@ -182,7 +182,7 @@ Hello
 
 在 [Hello TypeScript](#hello-typescript) 的体验中，相信能够感受到 TypeScript 编程带来的好处了，代码的健壮性得到了大大的提升！
 
-并且应该也能够大致了解到， TS 类型并不会给的编程带来非常高的门槛或者说开发阻碍，它是以一种非常小的成本换取大收益的行为。
+并且应该也能够深刻理解，TypeScript 的类型系统并不会给编程带来极高的门槛或者说开发障碍，这是以非常小的成本换取巨大收益的举措。
 
 :::tip
 如果还没有体验这个 demo ，建议先按教程跑一下，然后来讲解不同的 JavaScript 类型应该如何在 TypeScript 里定义，接下来的时间里，可以一边看，一边在 demo 里实践。
@@ -261,7 +261,7 @@ const nums: number[] = [1, 2, 3]
 const bools: boolean[] = [true, true, false]
 ```
 
-在实际的编程过程中，如果的数组一开始就有初始数据（数组长度不为 0 ），那么 TypeScript 也会根据数组里面的项目类型，正确自动帮推导这个数组的类型，这种情况下也可以省略类型定义：
+在实际的编程过程中，如果数组一开始就有初始数据（数组长度不为 0 ），那么 TypeScript 也会根据数组里面的项目类型，正确自动帮推导这个数组的类型，这种情况下也可以省略类型定义：
 
 ```ts
 // 这种有初始项目的数组， TS 也会推导它们的类型
@@ -270,7 +270,7 @@ const nums = [1, 2, 3]
 const bools = [true, true, false]
 ```
 
-但是！如果一开始是 `[]` ，那么就必须显式的指定数组类型（取决于的 [tsconfig.json](#了解-tsconfig-json) 的配置，可能会引起报错）：
+但是！如果一开始是 `[]` ，那么就必须显式的指定数组类型（取决于当前项目的 [tsconfig.json](#了解-tsconfig-json) 配置，可能会引起报错）：
 
 ```ts
 // 这个时候会认为是 any[] 或者 never[] 类型
@@ -635,7 +635,7 @@ function isArticle(
 
 ```
 
-再举个例子，是用 Vue 做页面，会涉及到子组件或者 DOM 的操作，当它们还没有渲染出来时，获取到的是 null ，渲染后才能拿到组件或者 DOM 结构，这种场景也可以使用联合类型：
+再举个例子，使用 Vue 做页面，会涉及到子组件或者 DOM 的操作，当它们还没有渲染出来时，获取到的是 null ，渲染后才能拿到组件或者 DOM 结构，这种场景也可以使用联合类型：
 
 ```ts
 // querySelector 拿不到 DOM 的时候返回 null
@@ -770,7 +770,7 @@ function sayHi(name: string): void {
 
 #### 异步函数的返回值
 
-对于异步函数，需要用 `Promise<T>` 类型来定义它的返回值，这里的 `T` 是泛型，取决于的函数最终返回一个什么样的值（ `async / await` 也适用这个类型）。
+对于异步函数，需要用 `Promise<T>` 类型来定义它的返回值，这里的 `T` 是泛型，取决于该函数最终返回一个什么样的值（ `async / await` 也适用这个类型）。
 
 例如这个例子，这是一个异步函数，会 `resolve` 一个字符串，所以它的返回类型是 `Promise<string>` （假如没有 `resolve` 数据，那么就是 `Promise<void>` ）。
 
@@ -844,7 +844,7 @@ Vue 的这个 watch API 在被调用时，需要接收一个数据源参数，�
 
 这个知识点其实就是 TypeScript 里的函数重载。
 
-先来看下不用重载的时候，的代码应该怎么写：
+先来看一下在不使用函数重载时应该如何编写代码：
 
 ```ts
 // 对单人或者多人打招呼
@@ -939,7 +939,7 @@ getFirstWord(123)
 
 这里的 any 类型，就是 TypeScript 任意值。
 
-既然报错是 “隐式” ，那 “显式” 的指定就可以了，当然，为了程序能够正常运行，还提高一下函数体内的代码健壮性：
+既然报错是 “隐式” ，那 “显式” 的指定就可以了，当然，为了程序能够正常运行，还要提高一下函数体内的代码健壮性：
 
 ```ts{2,4}
 // 这里的入参显式指定了 any
@@ -1096,9 +1096,9 @@ console.log(petter) // { name: 'Petter' }
 ```
 
 :::tip
-使用类型断言可以让 TypeScript 不检查的代码，它会认为是对的。
+使用类型断言可以让 TypeScript 不再检查该代码，默认是正确无误的。
 
-所以，请务必保证自己的代码真的是对的！
+所以，请务必保证这段代码真的是正确的！
 :::
 
 ### 类型推论
@@ -1179,7 +1179,7 @@ foo = true // true
     "dev:cjs": "node src/cjs/index.cjs",
     "dev:esm": "node src/esm/index.mjs",
     "dev:ts": "ts-node src/ts/index.ts",
-    "build": "tsc src/ts/index.ts --outDir dist",
+    "build": "tsc src/ts/index.ts --skipLibCheck --outDir dist",
     "compile": "babel src/babel --out-dir compiled",
     "serve": "node server/index.js"
   },
@@ -1200,6 +1200,10 @@ foo = true // true
 这样在命令行运行 `npm run build` 的时候，就会把 `src/ts/index.ts` 这个 TS 文件编译，并输出到项目下与 src 文件夹同级的 dist 目录下。
 
 其中 `tsc` 是 TypeScript 用来编译文件的命令， `--outDir` 是它的一个选项，用来指定输出目录，如果不指定，则默认生成到源文件所在的目录下面。
+
+:::tip
+笔者 2024-04-06 注：在 build script 中新增了一个选项 `--skipLibCheck` ，关于这个改动请见 [干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决](https://chengpeiquan.com/article/typescript-error-cannot-find-module-undici-types.html) 一文。
+:::
 
 把之前在 [函数的重载](#函数的重载) 用过的这个例子放到 `src/ts/index.ts` 文件里，因为它是一段比较典型的、包含了多个知识点的 TypeScript 代码：
 
@@ -1309,7 +1313,7 @@ const greetings = greet(['Petter', 'Tom', 'Jimmy'])
 console.log(greetings)
 ```
 
-的 build script 无需修改，依然只编译 `index.ts` ，但因为导入了 `greet.ts` ，所以 TypeScript 也会一并编译，来试一下运行 `npm run build` ， 现在 dist 目录下有两个文件了：
+package.json 里的 build script 无需修改，依然只编译 `index.ts` ，但因为导入了 `greet.ts` ，所以 TypeScript 也会一并编译，来试一下运行 `npm run build` ， 现在 dist 目录下有两个文件了：
 
 ```bash{2-5}
 hello-node
@@ -1381,7 +1385,7 @@ Welcome, Petter!
   // ...
   "scripts": {
     // ...
-    "build": "tsc src/ts/index.ts --outDir dist --target es6"
+    "build": "tsc src/ts/index.ts --skipLibCheck --outDir dist --target es6"
   }
   // ...
 }
@@ -1429,7 +1433,7 @@ console.log(greetings)
 
 在尝试 [编译单个文件](#编译单个文件) 和 [编译多个模块](#编译多个模块) 的时候，相信各位开发者应该没有太大的疑问，但是来到 [修改编译后的 JS 版本](#修改编译后的-js-版本) 这里，事情就开始变得复杂了起来，应该能感觉到编译的选项和测试成本都相应的增加了很多。
 
-事实上刚才编译的 JS 文件，因为涉及到 ESM 模块化，是无法通过普通的 `<script />` 标签在 HTML 页面里使用的（单个文件可以，因为没有涉及模块），不仅需要加上 ESM 模块所需的 `<script type="module" />`  属性，本地开发还需要启动本地服务器通过 HTTP 协议访问页面，才允许在浏览器里使用 ESM 模块（详见： [在浏览器里访问 ESM](guide.md#在浏览器里访问-esm) 一节）。
+事实上刚才编译的 JS 文件，因为涉及到 ESM 模块化，是无法通过普通的 `<script />` 标签在 HTML 页面里使用的（单个文件可以，因为没有涉及模块），不仅需要加上 ESM 模块所需的 `<script type="module" />` 属性，本地开发还需要启动本地服务器通过 HTTP 协议访问页面，才允许在浏览器里使用 ESM 模块（详见： [在浏览器里访问 ESM](guide.md#在浏览器里访问-esm) 一节）。
 
 因此在实际的项目开发中，需要借助 [构建工具](#工程化的构建工具) 来处理很多编译过程中的兼容性问题，降低开发成本。
 

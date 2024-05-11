@@ -21,6 +21,8 @@ outline: 'deep'
 | 兄弟组件通信 | [点击查看](#兄弟组件通信) |
 | 全局组件通信 | [点击查看](#全局组件通信) |
 
+<ReadingTips />
+
 ## 父子组件通信
 
 父子组件通信是指，B 组件引入到 A 组件里渲染，此时 A 是 B 的父级；B 组件的一些数据需要从 A 组件拿，B 组件有时也要告知 A 组件一些数据变化情况。
@@ -36,16 +38,16 @@ Father.vue
 
 常用的方法有：
 
-| 方案             | 父组件向子组件 | 子组件向父组件 | 对应章节传送门                 |
-| :--------------- | :------------- | :------------- | :----------------------------- |
-| props / emits    | props          | emits          | [点击查看](#props-emits)       |
-| v-model / emits  | v-model        | emits          | [点击查看](#v-model-emits)     |
-| ref / emits      | ref            | emits          | [点击查看](#ref-emits)         |
-| provide / inject | provide        | inject         | [点击查看](#provide-inject)    |
-| EventBus         | emit / on      | emit / on      | [点击查看](#eventbus-new)      |
-| Reative State    | -              | -              | [点击查看](#reative-state-new) |
-| Vuex             | -              | -              | [点击查看](#vuex-new)          |
-| Pinia            | -              | -              | [点击查看](pinia.md)           |
+| 方案             | 父组件向子组件 | 子组件向父组件 | 对应章节传送门                  |
+| :--------------- | :------------- | :------------- | :------------------------------ |
+| props / emits    | props          | emits          | [点击查看](#props-emits)        |
+| v-model / emits  | v-model        | emits          | [点击查看](#v-model-emits)      |
+| ref / emits      | ref            | emits          | [点击查看](#ref-emits)          |
+| provide / inject | provide        | inject         | [点击查看](#provide-inject)     |
+| EventBus         | emit / on      | emit / on      | [点击查看](#eventbus-new)       |
+| Reactive State   | -              | -              | [点击查看](#reactive-state-new) |
+| Vuex             | -              | -              | [点击查看](#vuex-new)           |
+| Pinia            | -              | -              | [点击查看](pinia.md)            |
 
 为了方便阅读，下面的父组件统一叫 Father.vue ，子组件统一叫 Child.vue 。
 
@@ -773,13 +775,13 @@ Grandfather.vue
 
 因此需要更直接的通信方式来解决这种问题，这一 Part 就是讲一讲 C 和 A 之间的数据传递，常用的方法有：
 
-| 方案             | 爷组件向孙组件 | 孙组件向爷组件 | 对应章节传送门                 |
-| :--------------- | :------------- | :------------- | :----------------------------- |
-| provide / inject | provide        | inject         | [点击查看](#provide-inject)    |
-| EventBus         | emit / on      | emit / on      | [点击查看](#eventbus-new)      |
-| Reative State    | -              | -              | [点击查看](#reative-state-new) |
-| Vuex             | -              | -              | [点击查看](#vuex-new)          |
-| Pinia            | -              | -              | [点击查看](pinia.md)           |
+| 方案             | 爷组件向孙组件 | 孙组件向爷组件 | 对应章节传送门                  |
+| :--------------- | :------------- | :------------- | :------------------------------ |
+| provide / inject | provide        | inject         | [点击查看](#provide-inject)     |
+| EventBus         | emit / on      | emit / on      | [点击查看](#eventbus-new)       |
+| Reactive State   | -              | -              | [点击查看](#reactive-state-new) |
+| Vuex             | -              | -              | [点击查看](#vuex-new)           |
+| Pinia            | -              | -              | [点击查看](pinia.md)            |
 
 因为上下级的关系的一致性，爷孙组件通信的方案也适用于 [父子组件通信](#父子组件通信) ，只需要把爷孙关系换成父子关系即可，为了方便阅读，下面的爷组件统一叫 Grandfather.vue，子组件统一叫 Grandson.vue 。
 
@@ -1053,7 +1055,7 @@ export default defineComponent({
 })
 ```
 
-此时因为第三个参数默认为 Falsy 值，所以可以得到一个函数作为默认值，并可以调用该函数获得一个 Food 对象。
+此时因为第三个参数默认为 [Falsy 值](https://developer.mozilla.org/zh-CN/docs/Glossary/Falsy) ，所以可以得到一个函数作为默认值，并可以调用该函数获得一个 Food 对象。
 
 如果将第三个参数传入为 `true` ，再运行程序则会在 `const food = getFood()` 这一行报错：
 
@@ -1129,12 +1131,12 @@ A.vue
 
 常用的方法有：
 
-| 方案          | 发起方 | 接收方 | 对应章节传送门                 |
-| :------------ | :----- | :----- | :----------------------------- |
-| EventBus      | emit   | on     | [点击查看](#eventbus-new)      |
-| Reative State | -      | -      | [点击查看](#reative-state-new) |
-| Vuex          | -      | -      | [点击查看](#vuex-new)          |
-| Pinia         | -      | -      | [点击查看](pinia.md)           |
+| 方案           | 发起方 | 接收方 | 对应章节传送门                  |
+| :------------- | :----- | :----- | :------------------------------ |
+| EventBus       | emit   | on     | [点击查看](#eventbus-new)       |
+| Reactive State | -      | -      | [点击查看](#reactive-state-new) |
+| Vuex           | -      | -      | [点击查看](#vuex-new)           |
+| Pinia          | -      | -      | [点击查看](pinia.md)            |
 
 ## EventBus ~new
 
@@ -1314,9 +1316,9 @@ export default {
 
 这样在组件里就可以继续使用 `eventBus.$on` 、`eventBus.$emit` 等旧 API ，不会影响旧项目的升级使用。
 
-## Reative State ~new
+## Reactive State ~new
 
-在 Vue 3 里，使用响应式的 reative API 也可以实现一个小型的状态共享库，如果运用在一个简单的 H5 活动页面这样小需求里，完全可以满足使用。
+在 Vue 3 里，使用响应式的 reactive API 也可以实现一个小型的状态共享库，如果运用在一个简单的 H5 活动页面这样小需求里，完全可以满足使用。
 
 ### 创建状态中心
 

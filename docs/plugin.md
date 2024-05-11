@@ -8,6 +8,8 @@ outline: 'deep'
 
 在 Vue 项目里，可以使用针对 Vue 定制开发的专属插件，也可以使用无框架依赖的通用 JS 插件，插件的表现形式也是丰富多彩，既可以是功能的实现，也可以是组件的封装，本章将从插件的使用到亲自开发一个小插件的过程，逐一讲解。
 
+<ReadingTips />
+
 ## 插件的安装和引入
 
 在 [前端工程化](guide.md#了解前端工程化) 十分普及的今天，可以说几乎所有要用到的插件，都可以在 [npmjs](https://www.npmjs.com/) 上搜到，除了官方提供的包管理器 npm ，也有很多种安装方式选择。
@@ -169,7 +171,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 | 参数    | 类型               | 作用                                             |
 | :------ | :----------------- | :----------------------------------------------- |
-| plugin  | object \| function | 插件，一般是在 import 时使用的名称             |
+| plugin  | object \| function | 插件，一般是在 import 时使用的名称               |
 | options | object             | 插件的参数，有些插件在初始化时可以配置一定的选项 |
 
 基本的写法就是像下面这样：
@@ -1109,7 +1111,11 @@ index.min.js 同样正常按照 UMD 风格转换成了 JavaScript 代码：
 
 开发或者迭代了一个 npm 包之后，不建议直接发布，可以在本地进行测试，直到没有问题了再发布到 npmjs 上供其他人使用。
 
-npm 提供了一个 `npm link` 命令供开发者本地联调，假设 `path/to/my-library` 是一个 npm 包的项目路径， `path/to/my-project` 是一个调试项目的所在路径，那么通过以下步骤可以在 `my-project` 里本地调试 `my-library` 包：
+npm 提供了一个 `npm link` 命令供开发者本地联调，假设 `path/to/my-library` 是一个 npm 包的项目路径， `path/to/my-project` 是一个调试项目的所在路径，那么通过以下步骤可以在 `my-project` 里本地调试 `my-library` 包。
+
+:::tip
+关于 `path/to` 的典故，可以查看 [#294](https://github.com/chengpeiquan/learning-vue3/issues/294) 了解。
+:::
 
 ##### 创建本地软链接
 

@@ -12,6 +12,8 @@ outline: 'deep'
 本章内的大部分内容都会和 Vuex 作对比，方便从 Vuex 项目向 Pinia 的迁移。
 :::
 
+<ReadingTips />
+
 ## 关于 Pinia ~new
 
 由于 Vuex 4.x 版本只是个过渡版，Vuex 4 对 TypeScript 和 Composition API 都不是很友好，虽然官方团队在 GitHub 已有讨论 [Vuex 5](https://github.com/vuejs/rfcs/discussions/270) 的开发提案，但从 2022-02-07 在 Vue 3 被设置为默认版本开始， Pinia 已正式被官方推荐作为全局状态管理的工具。
@@ -181,7 +183,7 @@ export const useStore = defineStore('main', {
 })
 ```
 
-的预期应该是一个字符串数组 `string[]` ，但是这个时候 Pinia 会帮推导成 `never[]` ，那么类型就对不上了。
+`randomMessages` 的预期应该是一个字符串数组 `string[]` ，但是这个时候 Pinia 会帮推导成 `never[]` ，那么类型就对不上了。
 
 这种情况下就需要手动指定 randomMessages 的类型，可以通过 `as` 来指定：
 
@@ -824,7 +826,7 @@ export const useStore = defineStore('main', {
 
 ### 调用 action
 
-像普通的函数一样使用即可，不需要和 Vuex 一样执行 commit 或者 dispatch，在 Pinia ，不需要，不需要。
+在 Pinia 中只要像普通的函数一样使用即可，**不需要**和 Vuex 一样调用 commit 或者 dispatch。
 
 ```ts
 export default defineComponent({

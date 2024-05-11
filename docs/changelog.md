@@ -8,6 +8,20 @@ outline: 'deep'
 
 考虑到后面还会不定期更新内容，所以翻了一下之前跟朋友的微信聊天记录整理了前期的更新记录，之后当文档有再次更新的时候也会继续整理更新记录，方便读者们查阅。
 
+## 2024-04-06
+
+在 [快速上手 TypeScript](typescript.md) 一章里的 “如何编译为 JavaScript 代码” 一节，对 build script 中新增了一个选项 `--skipLibCheck` ，关于这个改动请见 [干净的 TypeScript 项目在编译时报错 Cannot find module 'undici-types' 的原因和解决](https://chengpeiquan.com/article/typescript-error-cannot-find-module-undici-types.html) 一文。
+
+感谢 [@rainmonG](https://github.com/rainmonG) 在 [#193 (comment)](https://github.com/chengpeiquan/learning-vue3/issues/193#issuecomment-2036541817) 的反馈。
+
+## 2024-02-20
+
+在 [单组件的编写](component.md) 、 [路由的使用](router.md) 、 [插件的开发和使用](plugin.md) 、 [组件之间的通信](communication.md) 、 [全局状态管理](pinia.md) 这几张内容的最前面，补充了一个阅读提示，解答近期收到的读者反馈的一些疑惑。
+
+## 2024-01-16
+
+插件部分增加一个 [path/to 的典故](./plugin.md#对-npm-包进行本地调试) 扩展阅读。
+
 ## 2023-05-07
 
 感谢各位读者长期以来的支持，经过长达一年时间的打磨和优化，本书已于 2023 年 5 月份正式出版上市，纸质版书籍的正式名称为《前端工程化：基于 Vue.js 3.0 的设计与实践》。
@@ -32,7 +46,7 @@ outline: 'deep'
 
 ## 2022-11-17
 
-更新了 “用 ES Module 设计模块” 中关于 [命名导出和导入](guide.md#命名导出和导入-1) 的讲解，减少在理解上的歧义，感谢 [@Yeshan-Taoist](https://github.com/Yeshan-Taoist) 在 [#163 (commont)](https://github.com/chengpeiquan/learning-vue3/issues/163#issuecomment-1317193359) 的反馈。
+更新了 “用 ES Module 设计模块” 中关于 [命名导出和导入](guide.md#命名导出和导入-1) 的讲解，减少在理解上的歧义，感谢 [@Yeshan-Taoist](https://github.com/Yeshan-Taoist) 在 [#163 (comment)](https://github.com/chengpeiquan/learning-vue3/issues/163#issuecomment-1317193359) 的反馈。
 
 ## 2022-11-12
 
@@ -45,7 +59,7 @@ outline: 'deep'
 - 把一些原来没有特地注明是父组件的代码还是子组件的代码，进行了明确的标明，并优化了一部分示范代码
 - 修正了之前一部分示范代码的 TypeScript 类型（之前有一些地方用了 any ，现在更新为明确的类型）
 - 优化了 [provide / inject](communication.md#provide-inject) 的相关内容，大幅度缩短了篇幅，但通过新的例子使其更容易看懂
-- 增加了 [Reative State](communication.md#reative-state-new) 创建一个小型的状态中心案例
+- 增加了 [Reactive State](communication.md#reactive-state-new) 创建一个小型的状态中心案例
 - 对 [Vuex](communication.md#vuex-new) 添加了一些使用提示，建议使用 [Pinia](pinia.md) 代替 Vuex 作为状态管理库使用
 
 ## 2022-11-06
